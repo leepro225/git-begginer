@@ -15,7 +15,7 @@ class Counter {
     subtract(num) {
         this.value -= 1;
         console.log('둘');
-        console.log('develop에 변경사항이 생겼습니다.');
+        console.log('develop에 변경사항이 생겼습니다. !!');
     }
 
     reset() {
