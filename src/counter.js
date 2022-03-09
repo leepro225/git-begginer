@@ -9,7 +9,7 @@ class Counter {
 
     add(num) {
         this.value += 1; 
-        console.log('이것은 test3의 작업물입니다.3');
+        console.log('이것은 test3의 작업물입니다.3 이게 오리진의 디벨롭인가?');
     }
 
     subtract(num) {
