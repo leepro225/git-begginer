@@ -21,7 +21,7 @@ class Counter {
 
     reset() {
         this.value = 0;
-        console.log('하나2');
+        console.log('하나2, 로그인 기능 수정');
     }
 }
 
