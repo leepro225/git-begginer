@@ -1,6 +1,7 @@
 class Counter {
     constructor() {
         this.value = 0;
+        console.log('이번엔 충돌 없이 작업해볼게');
     }
 
     set(target) {
