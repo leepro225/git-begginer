@@ -28,12 +28,12 @@
             font-size: 5rem;
             font-weight: bold;
         }
-        .buttonWrap {
+        .button-wrap {
             display: flex;
             padding: 10px;
             margin-top: 2rem;
         }
-        .buttonWrap button {
+        .button-wrap button {
             margin: 10px;
             padding: 20px;
             width: 120px;
@@ -46,8 +46,8 @@
     <section>
         <strong id="number" class="number">0</strong>
         <div class="button-wrap">
-            <button id="add">+</button>
             <button id="subtract">-</button>
+            <button id="add">+</button>
             <button id="reset">reset</button>
         </div>
     </section>
@@ -58,6 +58,7 @@
         const calculator = new Calculator();
 
         buttonWrap.addEventListener('click', function(event) {
+            if (event.target.nodeName !== "BUTTON") return null;
             const id = event.target.id;
             switch (id) {
                 case 'add' : calculator.add();
