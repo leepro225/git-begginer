@@ -13,10 +13,13 @@ class Counter {
 
     subtract(num) {
         this.value -= 1;
+        console.log('둘');
+
     }
 
     reset() {
         this.value = 0;
+        console.log('하나');
     }
 }
 
