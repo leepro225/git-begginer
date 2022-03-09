@@ -10,13 +10,13 @@ class Counter {
 
     add(num) {
         this.value += 1; 
-        console.log('이것은 test3의 작업물입니다.3');
+        console.log('이것은 test3의 작업물입니다');
     }
 
     subtract(num) {
         this.value -= 1;
         console.log('둘1');
-
+        console.log('디벨롭이 또 한 걸음 앞서 갔네요.');
     }
 
     reset() {
