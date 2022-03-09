@@ -18,6 +18,7 @@ class Counter {
     reset() {
         this.value = 0;
         console.log('test-10 2commit!');
+        console.log('긴급 버그 수정!');
     }
 }
 
