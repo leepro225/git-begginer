@@ -24,6 +24,7 @@ class Counter {
         console.log('하나2');
         console.log('내가 이 코드를 빠뜨렸군요@');
         console.log('내가 이 코드를 빠뜨렸군요@');
+        console.log('하나2, 로그인 기능 수정');
     }
 }
 
