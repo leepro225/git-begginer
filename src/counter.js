@@ -22,6 +22,8 @@ class Counter {
     reset() {
         this.value = 0;
         console.log('하나2');
+        console.log('내가 이 코드를 빠뜨렸군요@');
+        console.log('내가 이 코드를 빠뜨렸군요@');
     }
 }
 
