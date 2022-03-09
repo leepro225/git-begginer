@@ -9,6 +9,7 @@ class Counter {
 
     add(num) {
         this.value += 1; 
+        console.log('이것은 test3의 작업물입니다.');
     }
 
     subtract(num) {
