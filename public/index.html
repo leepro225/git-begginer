@@ -27,6 +27,8 @@
         .number {
             font-size: 5rem;
             font-weight: bold;
+            position: absolute;
+            top: 25%;
         }
         .button-wrap {
             display: flex;
@@ -39,6 +41,19 @@
             width: 120px;
             font-size: 2rem;
             font-weight: bold;;
+        }
+        .bounce {
+            animation: vibration .3s ease-in-out;
+            transition: all;
+        }
+
+        @keyframes vibration {
+            0% {
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
@@ -61,17 +76,28 @@
             if (event.target.nodeName !== "BUTTON") return null;
             const id = event.target.id;
             switch (id) {
-                case 'add' : calculator.add();
+                case 'add' : 
+                    calculator.add();
+                    bounce();
                     break;
-                case 'subtract' : calculator.subtract();
+                case 'subtract' : 
+                    calculator.subtract();
+                    bounce();
                     break;
-                case 'reset' : calculator.reset();
+                case 'reset' :
+                    calculator.reset();
                     break;
-                default : alert('버그가 존재합니다!');
+                default : 
+                    console.log(new Error(`not supported id ${id}`));
                     break;
             }
             calculator.set(number);
         });
+
+        const bounce = function() {
+            number.classList.add("bounce");
+            setTimeout(() => number.classList.remove("bounce"), 300); 
+        }
     </script>
 </body>
 </html>
