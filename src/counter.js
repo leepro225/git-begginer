@@ -1,4 +1,4 @@
-class Calculator {
+class Counter {
     constructor() {
         this.value = 0;
     }
@@ -13,10 +13,13 @@ class Calculator {
 
     subtract(num) {
         this.value -= 1;
+        console.log('둘');
+
     }
 
     reset() {
         this.value = 0;
+        console.log('하나');
     }
 }
 
