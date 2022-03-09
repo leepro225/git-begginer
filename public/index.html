@@ -44,13 +44,33 @@
 </head>
 <body>
     <section>
-        <strong class="number">0</strong>
-        <div class="buttonWrap">
-            <button>-</button>
-            <button>+</button>
-            <button>reset</button>
+        <strong id="number" class="number">0</strong>
+        <div class="button-wrap">
+            <button id="add">+</button>
+            <button id="subtract">-</button>
+            <button id="reset">reset</button>
         </div>
     </section>
     <script src="../src/calculator.js"></script>
+    <script>
+        const buttonWrap = document.querySelector(".button-wrap");
+        const number = document.querySelector("#number");
+        const calculator = new Calculator();
+
+        buttonWrap.addEventListener('click', function(event) {
+            const id = event.target.id;
+            switch (id) {
+                case 'add' : calculator.add();
+                    break;
+                case 'subtract' : calculator.subtract();
+                    break;
+                case 'reset' : calculator.reset();
+                    break;
+                default : alert('버그가 존재합니다!');
+                    break;
+            }
+            calculator.set(number);
+        });
+    </script>
 </body>
 </html>
